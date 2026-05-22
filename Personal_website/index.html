@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josie Rose Crane | AI Safety Portfolio</title>
+    <meta name="description" content="Personal portfolio of Josie Rose Crane, dedicated to AI safety research, engineering, and alignment. Explore technical projects, writing, and the interactive Reward Hacking Simulator.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Interactive Particles -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="site-logo" id="logo-nav-link" data-target="home">
+                <span class="logo-accent">&lt;</span>Josie Rose Crane<span class="logo-accent"> /&gt;</span>
+                <span class="logo-sub">AI Safety for our world</span>
+            </a>
+            <button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="main-navigation" id="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active" id="nav-home" data-target="home">Home</a></li>
+                    <li><a href="#about" class="nav-link" id="nav-about" data-target="about">About me</a></li>
+                    <li><a href="#work" class="nav-link" id="nav-work" data-target="work">My work</a></li>
+                    <li><a href="#cool-stuff" class="nav-link" id="nav-cool-stuff" data-target="cool-stuff">Stuff I think is cool</a></li>
+                    <li><a href="#contact" class="nav-link" id="nav-contact" data-target="contact">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="content-wrapper">
+        
+        <!-- ================= HOME PAGE ================= -->
+        <section id="page-home" class="portfolio-page active">
+            <div class="hero-section">
+                <!--<div class="badge hero-badge">
+        <span class="badge-dot"></span> AI Alignment & Safety Research
+    </div>-->
+                <h1 class="hero-title">
+                    Securing the Future of <br>
+                    <span class="gradient-text">General Intelligence</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Hello, I'm <span class="highlight-name">Josie Crane</span>. Within AI safety, my primary interests are societal resilience, human-AI interaction, alignment/emergent misalignment, and environmental protection.
+                </p>
+                <p class="hero-subtitle">
+                    I believe coordinated international action from scientists and policymakers is imperative to making sure AI is truly beneficial for our world.
+                </p>
+                <p class="hero-subtitle">
+                    🌼Have a lovely day!🌼
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="hero-btn-work" data-target="work">
+                        Explore My Work
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                    </button>
+                    <button class="btn btn-secondary" id="hero-btn-contact" data-target="contact">Let's Connect</button>
+                </div>
+            </div>
+
+            <!-- Home Highlight Cards (Quick overview of qualifications) -->
+            <div class="home-highlights">
+                <div class="highlight-card">
+                    <div class="card-icon-wrapper icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                    </div>
+                    <h3>Technical Rigor</h3>
+                    <p>Demonstrable experience working on technical safety problems, model audits, or structural verification.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="card-icon-wrapper icon-green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h3>Safety First Mindset</h3>
+                    <p>Committed to addressing existential risks, alignment failures, and critical sociotechnical issues in frontier models.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="card-icon-wrapper icon-coral">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                    </div>
+                    <h3>Ecosystem Collaborator</h3>
+                    <p>Active participation in alignment communities, policy discussion tables, and multi-disciplinary research programs.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="card-icon-wrapper icon-amber">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                    </div>
+                    <h3>International Outlook</h3>
+                    <p>Aware that AI safety is a global issue, and is eager to foster and take part in international cooperation.</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- ================= ABOUT ME PAGE ================= -->
+        <section id="page-about" class="portfolio-page">
+            <div class="section-header-block">
+                <div class="badge">About me</div>
+                <h2 class="section-title">My Journey & <span class="gradient-text">Safety Thesis</span></h2>
+                <p class="section-description">Who I am, why I entered AI Safety, and how I approach the challenge of technical alignment.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-main-card">
+                    <h3>My Mission</h3>
+                    <div class="placeholder-box">
+                        <p class="placeholder-tip">&lt;!-- Easy Customization --&gt;</p>
+                        <p><strong>[Your Background Story]</strong></p>
+                        <p>Write an engaging introduction about yourself here. Explain what motivated you to transition into or start in the AI Safety field. You might talk about your background in computer science, mathematics, philosophy, social sciences, or physics, and the specific moment or realization that prompted you to focus on the long-term impacts and control problems of AI systems.</p>
+                        <p>Discuss your general perspective on the timeline to AGI, the critical nature of the alignment challenge, and what kind of roles you are seeking (e.g., Technical Safety Researcher, Alignment Engineer, Governance Analyst, or Evaluator).</p>
+                    </div>
+                    
+                    <div class="philosophy-quote">
+                        <span class="quote-symbol">“</span>
+                        <p><strong>[Insert your favorite safety quote or your personal slogan here]</strong><br>
+                        <span class="quote-author">— e.g., "Building systems that are robustly aligned to human intent is the defining scientific challenge of our generation."</span></p>
+                    </div>
+                </div>
+
+                <div class="about-sidebar">
+                    <div class="info-card">
+                        <h3>Core Focus Areas</h3>
+                        <ul class="focus-list">
+                            <li>
+                                <span class="focus-bullet red"></span>
+                                <div>
+                                    <strong>[Technical Area 1]</strong>
+                                    <span class="focus-sub">e.g., Mechanistic Interpretability, Sparse Autoencoders, or RLHF</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="focus-bullet amber"></span>
+                                <div>
+                                    <strong>[Technical Area 2]</strong>
+                                    <span class="focus-sub">e.g., Scalable Oversight, Debate, or Eliciting Latent Knowledge (ELK)</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="focus-bullet green"></span>
+                                <div>
+                                    <strong>[Technical Area 3]</strong>
+                                    <span class="focus-sub">e.g., Threat Modeling, Capability Evals, or Red-teaming frontier models</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="focus-bullet blue"></span>
+                                <div>
+                                    <strong>[Policy/Governance]</strong>
+                                    <span class="focus-sub">e.g., Compute Governance, Frontier Auditing, or International Agreements</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card timeline-summary-card">
+                        <h3>Quick History</h3>
+                        <div class="mini-timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-date">[Present]</span>
+                                <p class="timeline-text"><strong>[Current Activity]</strong> e.g., AI Safety Independent Research or Fellowships</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-date">[Past Year]</span>
+                                <p class="timeline-text"><strong>[Recent Role/Degree]</strong> e.g., Software Engineer at Tech Corp or MSc in Computer Science</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-date">[Earlier]</span>
+                                <p class="timeline-text"><strong>[Foundation]</strong> e.g., BS in Mathematics, Physics, or Computer Science</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MY WORK PAGE ================= -->
+        <section id="page-work" class="portfolio-page">
+            <div class="section-header-block">
+                <div class="badge">My work</div>
+                <h2 class="section-title">Research, Code & <span class="gradient-text">Publications</span></h2>
+                <p class="section-description">A collection of safety projects, technical publications, codebase repositories, and alignment write-ups.</p>
+            </div>
+
+            <!-- PROJECTS PORTFOLIO GRID -->
+            <div class="projects-divider">
+                <span>Projects & Academic Works</span>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span class="tag tag-alignment">Technical Alignment</span>
+                        <span class="tag tag-code">Python / PyTorch</span>
+                    </div>
+                    <h3>[Project / Paper Title 1]</h3>
+                    <p class="project-description">
+                        Provide a concise and exciting summary of your first major project or paper. Highlight the core safety problem you addressed (e.g. mechanistic interpretability of a toy transformer, circuit discovery, or an evaluation suite for deceptive alignment).
+                    </p>
+                    <div class="placeholder-tip-inline">&lt;!-- Edit to add link, github repo, or PDF --&gt;</div>
+                    <div class="project-footer">
+                        <a href="#" class="project-link">
+                            Read Write-up
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <span class="project-date">[Date/Year]</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span class="tag tag-governance">Governance / Policy</span>
+                        <span class="tag tag-writing">Policy Paper</span>
+                    </div>
+                    <h3>[Project / Paper Title 2]</h3>
+                    <p class="project-description">
+                        Summarize your second safety project. For example, a policy brief analyzing hardware-level compute governance, frontier AI safety standards, compute tracking protocols, or corporate alignment commitments.
+                    </p>
+                    <div class="placeholder-tip-inline">&lt;!-- Edit to add link or PDF --&gt;</div>
+                    <div class="project-footer">
+                        <a href="#" class="project-link">
+                            View Document
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <span class="project-date">[Date/Year]</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span class="tag tag-evals">Model Evaluations</span>
+                        <span class="tag tag-code">Evals Framework</span>
+                    </div>
+                    <h3>[Project / Paper Title 3]</h3>
+                    <p class="project-description">
+                        Summarize your third safety project or codebase. Mention any tools, evaluations, or benchmarks you created to test frontier model capabilities, agentic autonomy, cyber-capability limits, or persuasion ability.
+                    </p>
+                    <div class="placeholder-tip-inline">&lt;!-- Edit to add github repo link --&gt;</div>
+                    <div class="project-footer">
+                        <a href="#" class="project-link">
+                            GitHub Repository
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <span class="project-date">[Date/Year]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= STUFF I THINK IS COOL ================= -->
+        <section id="page-cool-stuff" class="portfolio-page">
+            <div class="section-header-block">
+                <div class="badge">Stuff I think is cool</div>
+                <h2 class="section-title">My Safety <span class="gradient-text">Inspirations</span></h2>
+                <p class="section-description">An interactive sandbox exploring reinforcement learning reward failure, alongside books, research directions, and newsletters.</p>
+            </div>
+
+            <!-- THE REWARD HACKING SIMULATOR -->
+            <div class="simulator-wrapper">
+                <div class="simulator-info">
+                    <div class="simulator-badge">Interactive Safety Demo</div>
+                    <h3>The Reward Hacking Sandbox</h3>
+                    <p class="simulator-intro-text">
+                        A fundamental problem in AI Safety is <strong>Specification Gaming</strong> (or Reward Hacking), where an agent optimizes the literal mathematical reward function it is given, but in an unexpected, counterproductive way that fails to achieve the designer's true intent.
+                    </p>
+                    <p class="simulator-attribution" style="font-size: 0.78rem; color: var(--text-dark); margin-top: -8px; margin-bottom: 16px; font-style: italic; line-height: 1.4;">
+                        Note: I did not create this interactive simulation widget — it was built entirely by Gemini 3.5 Flash (via Google's Antigravity coding agent). I only requested minor changes after the initial generation.
+                    </p>
+                    <p class="simulator-scenario">
+                        <strong>The Scenario:</strong> We are training an autonomous room-cleaning robot. We want it to sweep dust, but we only have a visual sensor (camera) to measure cleanliness. 
+                    </p>
+                    
+                    <div class="simulator-controls">
+                        <div class="control-group">
+                            <div class="control-header">
+                                <label for="reward-clean">Actual Cleanliness Weight</label>
+                                <span class="control-value" id="val-clean">1.0</span>
+                            </div>
+                            <input type="range" id="reward-clean" class="safety-slider" min="0" max="3" step="0.5" value="1.0">
+                            <span class="control-desc">Reward for actually sweeping and removing dust blocks.</span>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="control-header">
+                                <label for="reward-visual">Visual Cleanliness Weight</label>
+                                <span class="control-value" id="val-visual">1.0</span>
+                            </div>
+                            <input type="range" id="reward-visual" class="safety-slider" min="0" max="3" step="0.5" value="1.0">
+                            <span class="control-desc">Reward for looking clean to the visual camera sensor.</span>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="control-header">
+                                <label for="penalty-effort">Effort Penalty (Energy Cost)</label>
+                                <span class="control-value" id="val-effort">0.5</span>
+                            </div>
+                            <input type="range" id="penalty-effort" class="safety-slider" min="0" max="3" step="0.5" value="0.5">
+                            <span class="control-desc">Negative reward for moving and doing physical work.</span>
+                        </div>
+
+                        <button class="btn btn-primary btn-block" id="btn-run-sim">
+                            Run Simulation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="simulator-display">
+                    <!-- 5x5 grid container -->
+                    <div class="grid-container" id="sim-grid">
+                        <!-- Grid cells injected by JS -->
+                    </div>
+                    
+                    <div class="sim-dashboard">
+                        <div class="dash-stat">
+                            <span class="stat-label">Actual Dust Swept</span>
+                            <span class="stat-value text-green" id="stat-dust">0%</span>
+                        </div>
+                        <div class="dash-stat">
+                            <span class="stat-label">Camera Report Score</span>
+                            <span class="stat-value text-blue" id="stat-camera">0%</span>
+                        </div>
+                        <div class="dash-stat">
+                            <span class="stat-label">Energy Spent</span>
+                            <span class="stat-value text-amber" id="stat-energy">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="sim-feedback-box" id="sim-status-box">
+                        <h4 id="sim-outcome-title">Simulator Ready</h4>
+                        <p id="sim-outcome-desc">Adjust the sliders and click "Run Simulation" to observe how reward weights change the agent's optimal policy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cool-stuff-grid">
+                <!-- Recommended Papers & Literature -->
+                <div class="cool-card">
+                    <div class="cool-card-header">
+                        <div class="cool-icon icon-red">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3a1 1 0 0 1 1-1h15v20H5a1 1 0 0 1-1-1z"/></svg>
+                        </div>
+                        <h3>Safety Papers & Literature</h3>
+                    </div>
+                    <p class="cool-card-intro">Research publications and safety theories that deeply shaped my alignment perspective:</p>
+                    <ul class="cool-list">
+                        <li>
+                            <a href="#" class="cool-item-link">[Paper Title 1]</a>
+                            <span class="cool-item-meta">by [Author Name(s)]</span>
+                            <p class="cool-item-desc">A brief sentence explaining why you find this paper compelling (e.g., "A foundational look at reward gaming" or "Introduces elegant circuit analysis methods").</p>
+                        </li>
+                        <li>
+                            <a href="#" class="cool-item-link">[Paper Title 2]</a>
+                            <span class="cool-item-meta">by [Author Name(s)]</span>
+                            <p class="cool-item-desc">A brief sentence on what you learned or why it represents a major milestone in alignment research.</p>
+                        </li>
+                        <li>
+                            <a href="#" class="cool-item-link">[Paper Title 3]</a>
+                            <span class="cool-item-meta">by [Author Name(s)]</span>
+                            <p class="cool-item-desc">Explain the paper's importance (e.g., "Essential reading for hardware limits" or "Introduces ELK framework").</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Blogs, Communities & Newsletters -->
+                <div class="cool-card">
+                    <div class="cool-card-header">
+                        <div class="cool-icon icon-amber">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </div>
+                        <h3>Blogs & Communities</h3>
+                    </div>
+                    <p class="cool-card-intro">Platforms and publications where I actively follow AI alignment discussions:</p>
+                    <ul class="cool-list">
+                        <li>
+                            <a href="https://www.alignmentforum.org" target="_blank" rel="noopener" class="cool-item-link">AI Alignment Forum</a>
+                            <p class="cool-item-desc">Highly technical core alignment research, agenda listings, and researcher updates.</p>
+                        </li>
+                        <li>
+                            <a href="https://www.lesswrong.com" target="_blank" rel="noopener" class="cool-item-link">LessWrong</a>
+                            <p class="cool-item-desc">Broad epistemics, decision theory, rationality, and high-level artificial agency safety discussions.</p>
+                        </li>
+                        <li>
+                            <a href="https://aisafetynetwork.org/" target="_blank" rel="noopener" class="cool-item-link">[Favorite Newsletter or Podcast]</a>
+                            <p class="cool-item-desc">e.g., The AI Safety Newsletter by Center for AI Safety, or Robert Miles' AI Safety videos.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Inspiring Research Frontiers -->
+                <div class="cool-card">
+                    <div class="cool-card-header">
+                        <div class="cool-icon icon-green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2.2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Research Frontiers I Track</h3>
+                    </div>
+                    <p class="cool-card-intro">Specific technical agendas that I believe are particularly promising:</p>
+                    
+                    <div class="concept-tags-container">
+                        <div class="concept-tag-box">
+                            <strong>[Concept 1]</strong>
+                            <p class="concept-tag-desc">e.g. Mechanistic Interpretability: Inspecting weights of models like biological neural circuits to identify deceptive subnets.</p>
+                        </div>
+                        <div class="concept-tag-box">
+                            <strong>[Concept 2]</strong>
+                            <p class="concept-tag-desc">e.g. Scalable Oversight: Training helper models to audit output behavior that human monitors can no longer evaluate manually.</p>
+                        </div>
+                        <div class="concept-tag-box">
+                            <strong>[Concept 3]</strong>
+                            <p class="concept-tag-desc">e.g. Singular Value Attribution & SAEs: Building mathematical foundations to decompose features cleanly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ME PAGE ================= -->
+        <section id="page-contact" class="portfolio-page">
+            <div class="section-header-block">
+                <div class="badge">Contact me</div>
+                <h2 class="section-title">Let's Discuss <span class="gradient-text">Collaboration</span></h2>
+                <p class="section-description">If you are a safety researcher, employer, or team looking to collaborate, feel free to reach out.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form Card -->
+                <div class="contact-form-card">
+                    <h3>Send me a message</h3>
+                    <form id="portfolio-contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('[Form submission logic goes here. When hosted, hook this up to a service like Formspree, Netlify Forms, or Web3Forms!]');">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Your Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Topic / Purpose</label>
+                            <select id="contact-subject" name="subject">
+                                <option value="job">AI Safety Job Opportunity</option>
+                                <option value="collaboration">Research Collaboration</option>
+                                <option value="rationality">General Query / Coffee Chat</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Your Message</label>
+                            <textarea id="contact-message" name="message" rows="6" placeholder="Write your message here... I will get back to you as soon as possible!" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Details / Info -->
+                <div class="contact-info-panel">
+                    <div class="info-card">
+                        <h3>Connect Digitally</h3>
+                        <p class="info-intro">I am active across several platforms in the AI alignment ecosystem:</p>
+                        
+                        <div class="social-links-grid">
+                            <a href="mailto:your.email@example.com" class="social-card">
+                                <div class="social-icon icon-red">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </div>
+                                <div class="social-text">
+                                    <strong>Email</strong>
+                                    <span>[your.email@example.com]</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com" target="_blank" rel="noopener" class="social-card">
+                                <div class="social-icon icon-blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </div>
+                                <div class="social-text">
+                                    <strong>GitHub</strong>
+                                    <span>github.com/[username]</span>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-card">
+                                <div class="social-icon icon-green">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                                </div>
+                                <div class="social-text">
+                                    <strong>LinkedIn</strong>
+                                    <span>linkedin.com/in/[username]</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.alignmentforum.org" target="_blank" rel="noopener" class="social-card">
+                                <div class="social-icon icon-coral">
+                                    <!-- A custom target-like safety icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                                </div>
+                                <div class="social-text">
+                                    <strong>Alignment Forum</strong>
+                                    <span>alignmentforum.org/[profile]</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card map-placeholder-card">
+                        <h3>Looking for Roles globally</h3>
+                        <p class="map-text">
+                            Currently open to remote opportunities worldwide, or hybrid/on-site positions in major AI Safety hubs (e.g., <strong>San Francisco Bay Area, London, Boston, or Oxford</strong>).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 [Your Name]. All rights reserved.</p>
+            <p class="footer-subtext">Dedicated to robust AI alignment & existential safety.</p>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+</html>
