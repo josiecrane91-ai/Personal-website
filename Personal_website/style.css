@@ -37,7 +37,7 @@
     --shadow-glow: 0 0 20px rgba(251, 113, 133, 0.15);
     /* Layout */
     --max-width: 1200px;
-    --header-height: 80px;
+    --header-height: 110px;
 }
 
 /* --- Base Reset & Setup --- */
