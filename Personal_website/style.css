@@ -253,7 +253,10 @@ a {
 
 .site-logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.35rem;
@@ -262,16 +265,18 @@ a {
 
 .logo-accent {
     color: var(--accent-sage);
+    white-space: nowrap;
 }
 
 .logo-sub {
+    flex-basis: 100%;
     font-size: 0.68rem;
     font-family: var(--font-body);
     font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-muted);
-    margin-top: 1px;
+    margin-top: 4px;
 }
 
 /* Navigation Links */
